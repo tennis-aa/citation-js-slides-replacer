@@ -1,0 +1,20 @@
+{
+  "name": "citation-js-slides-replacer",
+  "version": "0.0.1",
+  "description": "create a bibliography with bibtex for html slides",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "tennis-aa",
+  "license": "ISC",
+  "devDependencies": {
+    "reveal.js": "^5.1.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@citation-js/core": "^0.7.18",
+    "@citation-js/plugin-bibtex": "^0.7.18",
+    "@citation-js/plugin-csl": "^0.7.18"
+  }
+}

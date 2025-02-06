@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
+</head>
+
+
+
+
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Slide 1</h1>
+        <span data-cite="texbook" data-citep>??</span>
+        <span data-cite="texbook" data-citet>??</span>
+        <a data-cite="texbook" data-citealt>??</a>
+        <span data-cite="texbook" data-citefull>??</span>
+      </section>
+      <section>
+        <h1>Slide 2</h1>
+        <span data-cite="knuth:1984" data-citep>??</span>
+        <span data-cite="knuth:1984" data-citet>??</span>
+        <a data-cite="knuth:1984" data-citealt>??</a>
+        <span data-cite="knuth:1984" data-citefull>??</span>
+      </section>
+      <section id="bibliography" data-bibfile="biblio.bib">
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="node_modules/reveal.js/dist/reveal.js"></script>
+  <script type="module" src="./dist/main.js">
+  </script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true
+    });
+  </script>
+</body>
+
+</html>

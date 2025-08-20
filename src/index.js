@@ -5,7 +5,7 @@ import "@citation-js/plugin-csl";
 const bibSection = document.getElementById('bibliography');
 if (bibSection) {
   fetch(bibSection.getAttribute("data-bibfile")).then((response) => response.text()).then((bibData) => {
-    let  citations = getCitations();
+    let citations = getCitations();
     let [entries, entriesHtml] = buildBibliography(citations, bibData);
     mergeBiblio(entriesHtml);
     replaceInText(entries);
@@ -76,7 +76,6 @@ function replaceInText(entries) {
     let refs = node.getAttribute('data-cite').split(',').map(s => s.trim());
     let refs_entry = refs.map(ref => entries[ref] ? entries[ref][0] : '??');
 
-    console.log(node.getAttribute("data-citet"))
     if (node.getAttribute('data-citet') !== null) {
       let out = refs_entry.map(ref => {
         let nameYear = ref === '??' ? ['?', '?'] : ref.split(', ');
@@ -93,7 +92,7 @@ function replaceInText(entries) {
       node.innerHTML = out;
     } else { // data-citep or unspecified
       let out = refs_entry.join('; ');
-      node.textContent = out;
+      node.textContent = '(' + out + ')';
       inTextStyle(node);
     }
   });
